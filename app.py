@@ -19,12 +19,8 @@ st.set_page_config(
 @st.cache_resource
 def load_model_and_data():
     try:
-        # Carregar modelo pré-treinado (usando o PKL retreinado)
-        try:
-            model = joblib.load('bike_sharing_model_pipeline_v2.pkl')
-        except FileNotFoundError:
-            # Fallback para o modelo original se o novo não existir
-            model = joblib.load('bike_sharing_model_pipeline.pkl')
+        # Carregar modelo pré-treinado (usando o PKL original do notebook)
+        model = joblib.load('bike_sharing_model_pipeline.pkl')
         
         # Carregar dados
         df = pd.read_csv('day.csv')

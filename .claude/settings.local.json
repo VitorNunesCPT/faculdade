@@ -10,7 +10,10 @@
       "Bash(streamlit_env/Scripts/pip.exe install --only-binary=all scikit-learn==1.3.2)",
       "Bash(streamlit_env/Scripts/streamlit.exe run app.py --server.port 8502 --server.headless true)",
       "Bash(rm:*)",
-      "Bash(streamlit_env/Scripts/streamlit.exe run app.py --server.port 8503 --server.headless true)"
+      "Bash(streamlit_env/Scripts/streamlit.exe run app.py --server.port 8503 --server.headless true)",
+      "Bash(streamlit_env/Scripts/pip.exe uninstall -y scikit-learn)",
+      "Bash(streamlit_env/Scripts/pip.exe install scikit-learn==1.6.1)",
+      "Bash(streamlit_env/Scripts/streamlit.exe run app.py --server.port 8504 --server.headless true)"
     ],
     "deny": []
   }
